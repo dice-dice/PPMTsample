@@ -1,35 +1,35 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class AddProject extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
-      projectName: '',
-      projectIdentifier: '',
-      description: '',
-      start_date: '',
-      end_date: '',
-    }
+      projectName: "",
+      projectIdentifier: "",
+      description: "",
+      start_date: "",
+      end_date: "",
+    };
 
-    this.onChange = this.onChange.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   onSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     const newProject = {
       projectName: this.state.projectName,
       projectIdentifier: this.state.projectIdentifier,
       description: this.state.description,
       start_date: this.state.start_date,
       end_date: this.state.end_date,
-    }
+    };
 
-    console.log(newProject)
+    console.log(newProject);
   }
 
   render() {
@@ -101,7 +101,7 @@ class AddProject extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
-export default AddProject
+export default AddProject;
